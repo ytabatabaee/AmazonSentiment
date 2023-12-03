@@ -1,1 +1,1 @@
-Overall score: 4, sentiment: Good
+Overall rating: 4, sentiment: Good
