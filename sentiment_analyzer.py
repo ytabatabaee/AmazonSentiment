@@ -6,12 +6,28 @@ import os
 
 
 def return_rating(clf, review_text):
+    """Takes a classifier and a review as input and predicts and prints the sentiment of the review
+                Parameters
+                ----------
+                clf : classifier object
+                   A pre-trained classifier that can predict the sentiment of a review (a number between 1 to 5)
+                review_text: str
+                    Review text
+                """
     rating, prob_rating = predict(clf, review_text)
     print('Overall rating: ' + str(rating) + ', sentiment: ' + rating_to_sentiment(rating))
     print('Probability of the review being rated in categories 1-5:\n', prob_rating)
 
 
 def call_classifier(review_text):
+    """Takes a review text as input and calls a classifier to predict its sentiment
+                Parameters
+                ----------
+                review_text: str
+                    Review text
+                """
+    print('Predicting the sentiment for the following review...')
+    print(review_text)
     clf_choice = questionary.select(
         "Select which classifier you would like to use:",
         choices=["1. Default (best performing)", "2. User-specified classifier"]).ask()
