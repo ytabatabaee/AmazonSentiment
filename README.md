@@ -23,7 +23,7 @@ This README includes the overview and the documentation of the project, and the 
 - [Acknowledgements](#acknowledgements)
 
 ## Dependencies
-The Amazon sentiment analysis software requires [Python 3.7+](https://www.python.org) and uses the following python packages: [scikit-learn (v1.2.2)](https://scikit-learn.org/stable/index.html), [questionary](https://pypi.org/project/questionary/), [nltk](https://www.nltk.org/), [Numpy](https://numpy.org) and [Pandas](https://pandas.pydata.org/), [seaborn (v0.13.0+)](https://seaborn.pydata.org/).
+The Amazon sentiment analysis software requires [Python 3.7+](https://www.python.org) and uses the following python packages: [scikit-learn (v1.2.2)](https://scikit-learn.org/stable/index.html), [questionary](https://pypi.org/project/questionary/), [nltk](https://www.nltk.org/), [Numpy](https://numpy.org), [Pandas](https://pandas.pydata.org/), [seaborn (v0.13.0+)](https://seaborn.pydata.org/), [wordcloud](https://pypi.org/project/wordcloud/) and [Matplotlib](https://matplotlib.org/).
 
 If you have Python3 and pip, use `pip install -r requirements.txt` to install all dependencies.
 
@@ -39,7 +39,7 @@ To run the software, first clone the github repository.
 
 If you don't have Python 3.7+, you can first create a virtual environment with `conda create -n py37 python=3.7`, and activate it with `source activate py37`. You can then install the dependencies with `pip install -r requirements.txt`.
 
-To run the software, run
+To run the software, type
 
 `$ python3 sentiment_analyzer.py`
 
