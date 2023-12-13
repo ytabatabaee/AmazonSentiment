@@ -1,6 +1,13 @@
 # Sentiment analysis on Amazon product reviews
 This repository contains the codes and data for the final project of CS 410: Text Information Systems course at UIUC in Fall 2023. The main goal of this project is to build a tool for sentiment analysis of Amazon product reviews and perform sentiment analysis on a large collection of reviews from different categories of products, such as clothes, appliances, software, etc. In addition to a sentiment analysis software, this work provides insight about various factors that correlate with the sentiment of a review, such as the type of words/phrases used, length of the reviews, etc, and also compare different machine learning classifiers for sentiment analysis on this data.
 
+This README includes the overview and the documentation of the project, and the other files are:
+- Project proposal: [Project_Proposal.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_Proposal.pdf)
+- Project progress report: [Project_progress_report.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_progress_report.pdf)
+- Tutorial video: TBD
+- Documentation of codes and results: The [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory includes all the code. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a report on the results of the data analysis on the review data and training the sentiment analysis classifiers.
+
+
 ## Contents
 - [Dependencies](#dependencies)
 - [Software usage](#software)

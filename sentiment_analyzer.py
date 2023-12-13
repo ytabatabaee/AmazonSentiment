@@ -26,15 +26,19 @@ def call_classifier(review_text):
                 review_text: str
                     Review text
                 """
-    print('Predicting the sentiment for the following review...')
-    print(review_text)
+    print('Predicting the sentiment for the following review:')
+    print('"' + review_text + '"')
     clf_choice = questionary.select(
         "Select which classifier you would like to use:",
         choices=["1. Default (best performing)", "2. User-specified classifier"]).ask()
 
     if clf_choice == "1. Default (best performing)":
         if not os.path.exists('models/default_clf_review.pkl'):
-            os.system('unzip models/default_clf_review.pkl.zip -d models')
+            if os.path.exists('models/default_clf_review.pkl.zip'):
+                os.system('unzip models/default_clf_review.pkl.zip -d models')
+            else:
+                print('Classifier path is wrong!')
+                return
         with open('models/default_clf_review.pkl', 'rb') as f:
             clf = pickle.load(f)
         return_rating(clf, review_text)
@@ -60,8 +64,12 @@ if __name__ == "__main__":
 
         elif section == "2. Review file":
             review_path = questionary.text("Enter the path to the review file: ").ask()
-            with open(review_path, 'r') as f:
-                review_text = f.read()
+            if os.path.exists(review_path):
+                with open(review_path, 'r') as f:
+                    review_text = f.read()
+            else:
+                print('Review path is wrong!')
+                exit(0)
             call_classifier(review_text)
 
         elif section == "3. Exit":
