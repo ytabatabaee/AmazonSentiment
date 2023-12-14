@@ -1,8 +1,10 @@
-scikit-learn=1.2.2
+scikit-learn==1.2.2
 questionary
 nltk
 pandas
 numpy
 pickle
 wordcloud
+matplotlib
+seaborn
 

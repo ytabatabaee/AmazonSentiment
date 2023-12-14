@@ -5,27 +5,29 @@ This README includes the overview and the documentation of the project, and the 
 - Project proposal: [Project_Proposal.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_Proposal.pdf)
 - Project progress report: [Project_progress_report.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_progress_report.pdf)
 - Tutorial video: TBD
-- Documentation of codes and results: The [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory includes all the code. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a report on the results of the data analysis on the review data and training the sentiment analysis classifiers.
+- Presentation: [final_presentation.pptx](https://github.com/ytabatabaee/AmazonSentiment/blob/main/final_presentation.pptx)
+- Documentation of codes and results: The [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory includes all the code. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a report on the results of the data analysis on the Amazon review data and training the sentiment analysis classifiers.
 
 
 ## Contents
-- [Dependencies](#dependencies)
+- [Code and Implementation](#codes)
 - [Software usage](#software)
 - [Data](#data)
-- [Codes](#codes)
-  * [Preprocessing](#preprocessing)
-  * [Data analysis](#data-analysis)
-  * [Sentiment analysis](#training-and-evaluation)
-- [Implementation](#implementation)
 - [Example use-cases](#examples)
-- [Pretrained classifiers](#pretrained-models)
+- [Pretrained classifiers](#pretrained-classifiers)
 - [Results](#results)
 - [Acknowledgements](#acknowledgements)
 
-## Dependencies
-The Amazon sentiment analysis software requires [Python 3.7+](https://www.python.org) and uses the following python packages: [scikit-learn (v1.2.2)](https://scikit-learn.org/stable/index.html), [questionary](https://pypi.org/project/questionary/), [nltk](https://www.nltk.org/), [Numpy](https://numpy.org), [Pandas](https://pandas.pydata.org/), [seaborn (v0.13.0+)](https://seaborn.pydata.org/), [wordcloud](https://pypi.org/project/wordcloud/) and [Matplotlib](https://matplotlib.org/).
+## Code and Implementation
+The code is implemented in [Python 3.7+](https://www.python.org) and uses the following python packages: [scikit-learn (v1.2.2)](https://scikit-learn.org/stable/index.html), [questionary](https://pypi.org/project/questionary/), [nltk](https://www.nltk.org/), [Numpy](https://numpy.org), [Pandas](https://pandas.pydata.org/), [seaborn](https://seaborn.pydata.org/), [wordcloud](https://pypi.org/project/wordcloud/) and [Matplotlib](https://matplotlib.org/).
 
 If you have Python3 and pip, use `pip install -r requirements.txt` to install all dependencies.
+
+The main sentiment analysis software is `sentiment_analyzer.py` and the other codes are available in the [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a demo of using these codes in training the sentiment analysis classifiers and the results of a data analysis on the Amazon review data. You can open this notebook in Google Colab https://colab.research.google.com/drive/1NklcGO4wKo8sM_oQ7rIbRRwOvYaGZ75z?usp=sharing and run the cells. **The jupyter notebook also serves as the report of the results of this project.**  The code has three main functionalities:
+
+- Preprocessing: fuctions for preprcessing the text ()
+- Data analysis: 
+- Sentiment analysis
 
 ## Software usage
 The sentiment analysis tool is implemented as a command-line software that takes a product review and a pre-trained sentiment classifier as input and predicts the rating (an integer between 1 to 5) and the sentiment of the review (Good, Bad, Average), as well as a probability distribution over the five rating classes.
@@ -43,7 +45,29 @@ To run the software, type
 
 `$ python3 sentiment_analyzer.py`
 
- in the command-line and answer the questions as they appear in the prompt. Further details about answering the prompt is explained in the tutorial video. In the simplest case, where the user just wants the sentiment of an input review text, you can select *option 1* for both review text and sentiment analyzer questions.
+ in the command-line and answer the questions as they appear in the prompt. The questions (in the order they would appear) are below:
+
+```
+** Sentiment analyzer for Amazon product reviews**  
+
+? Enter the full text or a file path containing a customer review for a product: (Use arrow keys)
+ » 1. Review text
+   2. Review file
+   3. Exit
+
+? Enter review text:  ---
+or
+? Enter the path to the review file:
+
+? Select which classifier you would like to use: (Use arrow keys)
+ » 1. Default (best performing)
+   2. User-specified classifier
+
+(if user-specified classifier)
+? Enter the path to the classifier pickle file:
+
+```
+ Further details about answering the prompt is explained in the tutorial video. In the simplest case, where the user just wants the sentiment of an input review text, you can select *option 1* for both review text and sentiment analyzer questions.
 
 The figure below shows an example of running the software.
 
@@ -54,10 +78,6 @@ The figure below shows an example of running the software.
 The data used in this project is part of the [Amazon reviews dataset from UCSD](https://nijianmo.github.io/amazon/index.html) that was published in 2018, and contains more than 233 million Amazon reviews between the years 1996 to 2018 from 29 different product categories, as well as additional information and metadata for each product. Since this dataset was very large and analyzing all of it was not feasible, we sampled a small collection of it containing at most 200,000 reviews from each of the 8 selected product categories: Fashion, Software, Appliances, Gift Cards, Magazine Subscriptions, Prime Pantry, Luxury Beauty, All Beauty. The total number of analyzed reviews was 1,436,883.
 
 The selected datasets from these 8 categories are available at [this Google Drive link](https://drive.google.com/drive/folders/1V6-7o-2mcjb5A1VQZEFVC3H-xtkz0PyG?usp=sharing).
-
-## Overview of the Code
-
-## Implementation
 
 ## Example tests
 
