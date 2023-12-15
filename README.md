@@ -4,7 +4,7 @@ This repository contains the codes and data for the final project of CS 410: Tex
 This README includes the overview and the documentation of the project, and the other files are:
 - Project proposal: [Project_Proposal.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_Proposal.pdf)
 - Project progress report: [Project_progress_report.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_progress_report.pdf)
-- Tutorial video: TBD
+- Tutorial video: [Google Drive link](https://drive.google.com/file/d/1ChAIQuxHHGHBLNhqksAbWvVOhIxG5UhW/view?usp=sharing)
 - Presentation: [final_presentation.pptx](https://github.com/ytabatabaee/AmazonSentiment/blob/main/final_presentation.pptx)
 - Documentation of codes and results: The [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory includes all the code. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a report on the results of the data analysis on the Amazon review data and training the sentiment analysis classifiers.
 
@@ -23,11 +23,12 @@ The code is implemented in [Python 3.7+](https://www.python.org) and uses the fo
 
 If you have Python3 and pip, use `pip install -r requirements.txt` to install all dependencies.
 
-The main sentiment analysis software is `sentiment_analyzer.py` and the other codes are available in the [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a demo of using these codes in training the sentiment analysis classifiers and the results of a data analysis on the Amazon review data. You can open this notebook in Google Colab https://colab.research.google.com/drive/1NklcGO4wKo8sM_oQ7rIbRRwOvYaGZ75z?usp=sharing and run the cells. **The jupyter notebook also serves as the report of the results of this project.**  The code has three main functionalities:
+The main sentiment analysis software is `sentiment_analyzer.py` and the other codes are available in the [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a demo of using these codes in training the sentiment analysis classifiers and the results of a data analysis on the Amazon review data. You can open this notebook in Google Colab https://colab.research.google.com/drive/1NklcGO4wKo8sM_oQ7rIbRRwOvYaGZ75z?usp=sharing and run the cells. **The jupyter notebook also serves as the report of all the results of this project, alongside this documentation.**  The code has two main parts:
 
-- Preprocessing: fuctions for preprcessing the text ()
-- Data analysis: 
-- Sentiment analysis
+- Preprocessing and data analysis: included in `preprcessing.py`, and has functions for preprocessing and cleaning the text data and extracting common words, bigrams, etc. The jupyter notebook shows how these functions can be used for processing and analysis of the review data.
+- Sentiment analysis: Codes in `training.py` as well as the second half of the jupyter notebook are related to training the sentiment analysis classifiers.
+
+All the codes have detailed comments to enable further development.
 
 ## Software usage
 The sentiment analysis tool is implemented as a command-line software that takes a product review and a pre-trained sentiment classifier as input and predicts the rating (an integer between 1 to 5) and the sentiment of the review (Good, Bad, Average), as well as a probability distribution over the five rating classes.
@@ -103,6 +104,15 @@ Below we summarize the testing accuracy of the 10 sentiment analysis classifiers
 | Bernoulli Naive Bayes    |     TF-IDF    | 0.6066941401145843 |
 | SGD Classifier     |     Count Vectorizer    |     0.6949442154990452     |
 | SGD Classifier     |     TF-IDF    |     0.6925319127550508     |
+
+## Self-evaluation.
+
+I have completed all the three main goals of the project for which I had planned in the project proposal, which were
+1) *Software:* creating a simple software that takes a product review as input and outputs its sentiment (i.e. good, bad, average) and rating on the scale of 1-5.
+2) *Data analysis:* Getting insight on the impact of various factors, such as the review length, type of words that are commonly used in the reviews, type of product, etc on the sentiment of a review for different product categories.
+3) *Classifiers:* Comparing different machine learning classifiers (e.g. random forest, Naive Bayes, SVM) for sentiment analysis on this data, and use the most promising one in the final software.
+
+Therefore, the project is completed as expected.
 
 ## Acknowledgements
 This project uses some ideas from this report https://cs229.stanford.edu/proj2018/report/122.pdf and this github repository https://github.com/avinash-vk/Sentiment-analysis-on-amazon-reviews.
