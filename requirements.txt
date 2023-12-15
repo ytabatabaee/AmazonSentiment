@@ -3,7 +3,6 @@ questionary
 nltk
 pandas
 numpy
-pickle
 wordcloud
 matplotlib
 seaborn

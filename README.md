@@ -16,6 +16,7 @@ This README includes the overview and the documentation of the project, and the 
 - [Example use-cases](#examples)
 - [Pretrained classifiers](#pretrained-classifiers)
 - [Results](#results)
+- [Self-evaluation](#self-evaluation)
 - [Acknowledgements](#acknowledgements)
 
 ## Code and Implementation
@@ -107,7 +108,7 @@ Below we summarize the testing accuracy of the 10 sentiment analysis classifiers
 
 ## Self-evaluation.
 
-I have completed all the three main goals of the project for which I had planned in the project proposal, which were
+I have completed all the three main goals of the project that I had planned in the project proposal, which were
 1) *Software:* creating a simple software that takes a product review as input and outputs its sentiment (i.e. good, bad, average) and rating on the scale of 1-5.
 2) *Data analysis:* Getting insight on the impact of various factors, such as the review length, type of words that are commonly used in the reviews, type of product, etc on the sentiment of a review for different product categories.
 3) *Classifiers:* Comparing different machine learning classifiers (e.g. random forest, Naive Bayes, SVM) for sentiment analysis on this data, and use the most promising one in the final software.
