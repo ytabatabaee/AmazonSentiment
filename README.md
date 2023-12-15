@@ -4,7 +4,7 @@ This repository contains the codes and data for the final project of CS 410: Tex
 This README includes the overview and the documentation of the project, and the other files are:
 - Project proposal: [Project_Proposal.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_Proposal.pdf)
 - Project progress report: [Project_progress_report.pdf](https://github.com/ytabatabaee/AmazonSentiment/blob/main/Project_progress_report.pdf)
-- Tutorial video: [Google Drive link](https://drive.google.com/file/d/1ChAIQuxHHGHBLNhqksAbWvVOhIxG5UhW/view?usp=sharing)
+- Tutorial video: [Google Drive link](https://drive.google.com/file/d/1ChAIQuxHHGHBLNhqksAbWvVOhIxG5UhW/view?usp=sharing), [Youtube link](https://youtu.be/3mGLCA0Hzcc)
 - Presentation: [final_presentation.pptx](https://github.com/ytabatabaee/AmazonSentiment/blob/main/final_presentation.pptx)
 - Documentation of codes and results: The [/src](https://github.com/ytabatabaee/AmazonSentiment/tree/main/src) directory includes all the code. The jupyter notebook [/src/Amazon_reviews_analysis.ipynb](https://github.com/ytabatabaee/AmazonSentiment/blob/main/src/Amazon_reviews_analysis.ipynb) contains a report on the results of the data analysis on the Amazon review data and training the sentiment analysis classifiers.
 
